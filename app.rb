@@ -5,7 +5,11 @@ module FormsLab
     
     get ('/'){erb :root}
     
-    get('/new'){erb :new}
+    get '/new' do
+      # set :root, File.join(File.dirname(views/pirates), '..')
+      erb :new
+      
+    end
     
     post '/pirates' do 
       
