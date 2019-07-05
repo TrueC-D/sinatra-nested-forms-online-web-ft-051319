@@ -16,7 +16,7 @@ module FormsLab
       @ship1 = params[:pirate][:ships][0]
       @ship2 = params[:pirate][:ships][1]
       
-      erb :show
+      erb :'pirates/show'
     end
 
     # code other routes/actions here
