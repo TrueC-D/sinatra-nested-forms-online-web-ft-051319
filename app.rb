@@ -7,11 +7,14 @@ module FormsLab
     
     get '/new' do
       # set :root, File.join(File.dirname(views/pirates), '..')
-      erb :new
+      erb :'pirates/new'
       
     end
     
     post '/pirates' do 
+      @pirate = params[:pirate]
+      @ship1 = params[:pirate][:ships][0]
+      @ship2 = params[:pirate][:ships][1]
       
       erb :show
     end
