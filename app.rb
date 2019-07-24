@@ -1,12 +1,17 @@
 require './environment'
 
 module FormsLab
+  
+  configure do
+    enable :sessions
+    set :session_secret, "secret"
+  end
+  
   class App < Sinatra::Base
     
     get ('/'){erb :root}
     
     get '/new' do
-      # set :root, File.join(File.dirname(views/pirates), '..')
       erb :'pirates/new'
       
     end
